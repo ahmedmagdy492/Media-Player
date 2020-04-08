@@ -1,0 +1,16 @@
+D:\Web API\Lab 1\MediaPlayer\Dummy\bin\Debug\Dummy.exe.config
+D:\Web API\Lab 1\MediaPlayer\Dummy\bin\Debug\Dummy.exe
+D:\Web API\Lab 1\MediaPlayer\Dummy\bin\Debug\Dummy.pdb
+D:\Web API\Lab 1\MediaPlayer\Dummy\bin\Debug\MediaPlayer.dll
+D:\Web API\Lab 1\MediaPlayer\Dummy\bin\Debug\MediaPlayer.pdb
+D:\Web API\Lab 1\MediaPlayer\Dummy\obj\Debug\Dummy.csprojResolveAssemblyReference.cache
+D:\Web API\Lab 1\MediaPlayer\Dummy\obj\Debug\MainWindow.g.cs
+D:\Web API\Lab 1\MediaPlayer\Dummy\obj\Debug\App.g.cs
+D:\Web API\Lab 1\MediaPlayer\Dummy\obj\Debug\Dummy_MarkupCompile.cache
+D:\Web API\Lab 1\MediaPlayer\Dummy\obj\Debug\Dummy_MarkupCompile.lref
+D:\Web API\Lab 1\MediaPlayer\Dummy\obj\Debug\MainWindow.baml
+D:\Web API\Lab 1\MediaPlayer\Dummy\obj\Debug\Dummy.g.resources
+D:\Web API\Lab 1\MediaPlayer\Dummy\obj\Debug\Dummy.Properties.Resources.resources
+D:\Web API\Lab 1\MediaPlayer\Dummy\obj\Debug\Dummy.csproj.GenerateResource.Cache
+D:\Web API\Lab 1\MediaPlayer\Dummy\obj\Debug\Dummy.exe
+D:\Web API\Lab 1\MediaPlayer\Dummy\obj\Debug\Dummy.pdb

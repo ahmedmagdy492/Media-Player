@@ -1,0 +1,13 @@
+D:\Web API\Lab 1\MediaPlayer\Playlist\bin\Debug\Playlist.dll
+D:\Web API\Lab 1\MediaPlayer\Playlist\bin\Debug\Playlist.pdb
+D:\Web API\Lab 1\MediaPlayer\Playlist\obj\Debug\Playlist.g.cs
+D:\Web API\Lab 1\MediaPlayer\Playlist\obj\Debug\Playlist_MarkupCompile.cache
+D:\Web API\Lab 1\MediaPlayer\Playlist\obj\Debug\Playlist_MarkupCompile.lref
+D:\Web API\Lab 1\MediaPlayer\Playlist\obj\Debug\Playlist.baml
+D:\Web API\Lab 1\MediaPlayer\Playlist\obj\Debug\Playlist.g.resources
+D:\Web API\Lab 1\MediaPlayer\Playlist\obj\Debug\Playlist.Properties.Resources.resources
+D:\Web API\Lab 1\MediaPlayer\Playlist\obj\Debug\Playlist.csproj.GenerateResource.Cache
+D:\Web API\Lab 1\MediaPlayer\Playlist\obj\Debug\Playlist.dll
+D:\Web API\Lab 1\MediaPlayer\Playlist\obj\Debug\Playlist.pdb
+D:\Web API\Lab 1\MediaPlayer\Playlist\obj\Debug\Playlist.csprojAssemblyReference.cache
+D:\Web API\Lab 1\MediaPlayer\Playlist\obj\Debug\Playlist.csproj.CoreCompileInputs.cache

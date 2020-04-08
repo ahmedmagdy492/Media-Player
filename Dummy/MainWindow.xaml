@@ -1,0 +1,25 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dummy"
+        xmlns:MediaPlayer="clr-namespace:MediaPlayer;assembly=MediaPlayer" xmlns:Playlist="clr-namespace:Playlist;assembly=Playlist" x:Class="Dummy.MainWindow"
+        mc:Ignorable="d"
+        Title="XPlayer" Height="536.975" Width="1013.158" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged"       
+        >
+    <Grid x:Name="Container">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Menu x:Name="toolMenu" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="1005">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open File" Click="MenuItem_Click" />
+                <MenuItem Header="_Exit" Click="MenuItem_Click_1" />
+            </MenuItem>
+        </Menu>
+        <MediaPlayer:UserControl1 x:Name="MediaPlayer"  HorizontalAlignment="Left" Height="484" Margin="0,20,0,0" VerticalAlignment="Top" Width="753"/>
+        <Playlist:UserControl1 x:Name="playList"  HorizontalAlignment="Left" Height="484" Margin="753,20,0,0" VerticalAlignment="Top" Width="252"/>
+    </Grid>
+</Window>

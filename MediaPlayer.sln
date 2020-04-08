@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaPlayer", "MediaPlayer\MediaPlayer.csproj", "{5B200946-CF84-471D-9680-78C0B376F72A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPlayer", "Dummy\XPlayer.csproj", "{4A2D7E02-FD00-4C5A-925B-DE12A11C9DD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playlist", "Playlist\Playlist.csproj", "{FF01410E-0321-4CF7-B4B6-5689413504FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B200946-CF84-471D-9680-78C0B376F72A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B200946-CF84-471D-9680-78C0B376F72A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B200946-CF84-471D-9680-78C0B376F72A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B200946-CF84-471D-9680-78C0B376F72A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A2D7E02-FD00-4C5A-925B-DE12A11C9DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2D7E02-FD00-4C5A-925B-DE12A11C9DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2D7E02-FD00-4C5A-925B-DE12A11C9DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2D7E02-FD00-4C5A-925B-DE12A11C9DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF01410E-0321-4CF7-B4B6-5689413504FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF01410E-0321-4CF7-B4B6-5689413504FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF01410E-0321-4CF7-B4B6-5689413504FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF01410E-0321-4CF7-B4B6-5689413504FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
