@@ -6,8 +6,62 @@
         xmlns:local="clr-namespace:Dummy"
         xmlns:MediaPlayer="clr-namespace:MediaPlayer;assembly=MediaPlayer" xmlns:Playlist="clr-namespace:Playlist;assembly=Playlist" x:Class="Dummy.MainWindow"
         mc:Ignorable="d"
-        Title="XPlayer" Height="536.975" Width="1013.158" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged"       
+        Title="XPlayer" Height="536.975" Width="1013.158" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged"      
         >
+    <Window.CommandBindings>
+        <CommandBinding Command="MediaCommands.Play"
+ Executed="CommandBinding_Executed_1"
+CanExecute="CommandBinding_CanExecute_1"/>
+        <CommandBinding Command="MediaCommands.Stop"
+          Executed="CommandBinding_Executed" CanExecute="CommandBinding_CanExecute"/>
+    </Window.CommandBindings>
+    <Window.Resources>
+        <DrawingImage x:Key="PlayImage">
+            <DrawingImage.Drawing>
+                <DrawingGroup>
+                    <DrawingGroup.Children>
+                        <GeometryDrawing Brush="Green" Geometry="F1 M 50,25L 0,0L 0,50L 50,25 Z "/>
+                    </DrawingGroup.Children>
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="StopImage">
+            <DrawingImage.Drawing>
+                <DrawingGroup>
+                    <DrawingGroup.Children>
+                        <GeometryDrawing Brush="Gray" Geometry="F1 M 0,0L 50,0L 50,50L 0,50L 0,0 Z "/>
+                    </DrawingGroup.Children>
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+    </Window.Resources>
+    
+    <Window.TaskbarItemInfo>
+        
+    <TaskbarItemInfo x:Name="taskBarItemInfo1" 
+                     Overlay="{StaticResource ResourceKey=PlayImage}"
+                     ThumbnailClipMargin="80,0,80,140"
+                     Description="Taskbar Item Info Sample">
+        <TaskbarItemInfo.ThumbButtonInfos>
+            <ThumbButtonInfoCollection>
+                <ThumbButtonInfo
+                    Click="ThumbButtonInfo_Click_1"
+                    DismissWhenClicked="False"
+                    Command="MediaCommands.Play"
+                    CommandTarget="{Binding ElementName=btnPlay}"
+                    Description="Play"
+                    ImageSource="{StaticResource ResourceKey=PlayImage}"/>
+                <ThumbButtonInfo
+                    Click="ThumbButtonInfo_Click"
+                    DismissWhenClicked="True"
+                    Command="MediaCommands.Stop"
+                    CommandTarget="{Binding ElementName=btnStop}"
+                    Description="Stop"
+                    ImageSource="{StaticResource ResourceKey=StopImage}"/>
+            </ThumbButtonInfoCollection>
+        </TaskbarItemInfo.ThumbButtonInfos>
+    </TaskbarItemInfo>
+</Window.TaskbarItemInfo>
     <Grid x:Name="Container">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

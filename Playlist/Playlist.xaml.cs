@@ -77,8 +77,9 @@ namespace Playlist
             }
         }
 
-        public void Next()
+        public bool Next()
         {
+            bool noNext = true;
             if(currentSong < (Songs.Count - 1))
             {
                 currentSong++;
@@ -86,11 +87,13 @@ namespace Playlist
                 var lbl = (MLabel)PlayList.Children[currentSong];
                 lbl.Foreground = Brushes.Blue;
                 ColorAllBack(currentSong);
+                noNext = false;
             }
+            return noNext;
         }
 
         public void Prev()
-        {
+        {           
             if(currentSong > 0)
             {
                 currentSong--;
@@ -141,11 +144,17 @@ namespace Playlist
         }
 
         // clear all songs
+
+        public void ClearAll()
+        {
+            PlayList.Children.Clear();
+            Songs.Clear();
+        }
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            for(int i = 0; i < Songs.Count; i++)
+            for (int i = 0; i < Songs.Count; i++)
             {
-                if(Songs[i] != CurrSongName)
+                if (Songs[i] != CurrSongName)
                 {
                     Songs.Remove(Songs[i]);
                     var ele = PlayList.Children[i];

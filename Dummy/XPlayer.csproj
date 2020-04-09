@@ -112,10 +112,16 @@
     <Resource Include="Ahdesign91-Media-Player-Adobe-Media-Player.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\m.png" />
+    <None Include="m.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\v.png" />
+    <None Include="v.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

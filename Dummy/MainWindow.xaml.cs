@@ -29,8 +29,7 @@ namespace Dummy
         JumpList jumplist;
         private bool isStarted = false;
         private DispatcherTimer timer = new DispatcherTimer();
-        private int counter = 0;
-        public System.Windows.Shell.TaskbarItemInfo TskBarProgress { get; set; }        
+        private int counter = 0;        
         public MainWindow()
         {
             InitializeComponent();
@@ -39,7 +38,7 @@ namespace Dummy
             jumplist = new JumpList();
             CreateJumpTask();
             timer.Tick += Timer_Tick;
-            TskBarProgress = new TaskbarItemInfo();
+            taskBarItemInfo1 = new TaskbarItemInfo();
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -48,16 +47,17 @@ namespace Dummy
             {
                 if (counter < MediaPlayer.Duration.TimeSpan.TotalSeconds)
                 {
-                    TskBarProgress.ProgressValue += counter;
+                    this.taskBarItemInfo1.ProgressState = TaskbarItemProgressState.Normal;
+                    taskBarItemInfo1.ProgressValue += counter;
                     counter++;
-                    if(MediaPlayer.FileName.EndsWith(".mp3"))
-                    {
-                        TskBarProgress.Overlay = new BitmapImage(new Uri(@"pack://application:,,,/Dummy;component/Images/m.png", UriKind.Absolute));
-                    }
-                    else
-                    {
-                        TskBarProgress.Overlay = new BitmapImage(new Uri(@"pack://application:,,,/Dummy;component/Images/v.png", UriKind.Absolute));
-                    }
+                    //if(MediaPlayer.FileName.EndsWith(".mp3"))
+                    //{
+                    //    TskBarProgress.Overlay = new BitmapImage(new Uri(@"pack://application:,,,/Dummy;component/Resources/m.png", UriKind.Absolute));
+                    //}
+                    //else
+                    //{
+                    //    TskBarProgress.Overlay = new BitmapImage(new Uri(@"pack://application:,,,/Dummy;component/Resources/v.png", UriKind.Absolute));
+                    //}
                 }
             }            
         }
@@ -84,13 +84,17 @@ namespace Dummy
 
         private void MediaPlayer_Finished()
         {
-            playList.Next();
-            this.Title = "XPlayer - " + System.IO.Path.GetFileName(playList.CurrSongName);
-            MediaPlayer.FileName = playList.CurrSongName;
-            MediaPlayer.PlayMedia();
-            timer.Stop();
-            timer.Start();
-            isStarted = true;
+            bool noNext = playList.Next();
+            if(!noNext)
+            {
+                this.Title = "XPlayer - " + System.IO.Path.GetFileName(playList.CurrSongName);
+                MediaPlayer.FileName = playList.CurrSongName;
+                MediaPlayer.PlayMedia();
+                timer.Stop();
+                timer.Start();
+                isStarted = true;
+                playList.ClearAll();
+            }
         }
 
         private void OnMediaAdded(MediaAddedEvent e)
@@ -157,7 +161,41 @@ namespace Dummy
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }        
+        }      
+
+        private void CommandBinding_Executed_1(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.MediaPlayer.PlayMedia();
+            this.taskBarItemInfo1.Overlay = (DrawingImage)this.FindResource("StopImage");
+        }
+
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.MediaPlayer.PlayMedia();
+            this.taskBarItemInfo1.Overlay = (DrawingImage)this.FindResource("PlayImage");
+        }
+
+        private void ThumbButtonInfo_Click(object sender, EventArgs e)
+        {
+            this.MediaPlayer.PlayMedia();
+            this.taskBarItemInfo1.Overlay = (DrawingImage)this.FindResource("PlayImage");
+        }
+
+        private void ThumbButtonInfo_Click_1(object sender, EventArgs e)
+        {
+            this.MediaPlayer.PlayMedia();
+            this.taskBarItemInfo1.Overlay = (DrawingImage)this.FindResource("StopImage");
+        }
+
+        private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void CommandBinding_CanExecute_1(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
 
         //private void TimeFunction()
         //{
